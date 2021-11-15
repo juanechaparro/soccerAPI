@@ -26,7 +26,7 @@ module.exports = function (injectedStore) {
         } else {
             user.id = nanoid();
         }
-
+        
         if (body.password || body.username) {
             await auth.upsert({
                 id: user.id,
